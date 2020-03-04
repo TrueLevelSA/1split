@@ -3,26 +3,12 @@ pragma solidity ^0.5.0;
 import "./IOneSplit.sol";
 import "./OneSplitBase.sol";
 import "./OneSplitMultiPath.sol";
-import "./OneSplitCompound.sol";
-import "./OneSplitFulcrum.sol";
-import "./OneSplitChai.sol";
-import "./OneSplitBdai.sol";
-import "./OneSplitIearn.sol";
-import "./OneSplitAave.sol";
-//import "./OneSplitSmartToken.sol";
 
 
 contract OneSplitView is
     IOneSplitView,
     OneSplitBaseView,
-    OneSplitMultiPathView,
-    OneSplitChaiView,
-    OneSplitBdaiView,
-    OneSplitAaveView,
-    OneSplitFulcrumView,
-    OneSplitCompoundView,
-    OneSplitIearnView
-    //OneSplitSmartTokenView
+    OneSplitMultiPathView
 {
     function getExpectedReturn(
         IERC20 fromToken,
@@ -56,14 +42,7 @@ contract OneSplitView is
 contract OneSplit is
     IOneSplit,
     OneSplitBase,
-    OneSplitMultiPath,
-    OneSplitChai,
-    OneSplitBdai,
-    OneSplitAave,
-    OneSplitFulcrum,
-    OneSplitCompound,
-    OneSplitIearn
-    //OneSplitSmartToken
+    OneSplitMultiPath
 {
     IOneSplitView public oneSplitView;
 
